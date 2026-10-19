@@ -1,0 +1,56 @@
+.nwsdb-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.nwsdb-indicator__dot-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+}
+
+.nwsdb-indicator__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+  z-index: 1;
+}
+
+.nwsdb-indicator__pulse {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background-color: currentColor;
+  opacity: 0.6;
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+/* Status Colors */
+.nwsdb-indicator--active {
+  color: var(--color-success-solid);
+}
+
+.nwsdb-indicator--warning {
+  color: var(--color-warning-solid);
+}
+
+.nwsdb-indicator--danger {
+  color: var(--color-danger-solid);
+}
+
+.nwsdb-indicator--transit {
+  color: var(--color-info-solid);
+}
+
+.nwsdb-indicator--offline {
+  color: var(--text-muted);
+}
