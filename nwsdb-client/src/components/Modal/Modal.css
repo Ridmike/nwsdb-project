@@ -1,0 +1,122 @@
+.nwsdb-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 200ms ease-out forwards;
+}
+
+.nwsdb-modal {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalScaleUp 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Sizes */
+.nwsdb-modal--sm {
+  max-width: 440px;
+}
+
+.nwsdb-modal--md {
+  max-width: 580px;
+}
+
+.nwsdb-modal--lg {
+  max-width: 760px;
+}
+
+.nwsdb-modal--xl {
+  max-width: 980px;
+}
+
+/* Header */
+.nwsdb-modal__header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nwsdb-modal__header-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nwsdb-modal__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.015em;
+}
+
+.nwsdb-modal__subtitle {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.nwsdb-modal__close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.nwsdb-modal__close-btn:hover {
+  background-color: var(--bg-surface-subtle);
+  color: var(--text-main);
+}
+
+/* Body */
+.nwsdb-modal__body {
+  padding: 24px;
+  overflow-y: auto;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.nwsdb-modal__footer {
+  padding: 16px 24px;
+  background-color: var(--bg-surface-subtle);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}

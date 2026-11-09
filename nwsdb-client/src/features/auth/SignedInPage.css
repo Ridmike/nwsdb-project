@@ -1,0 +1,98 @@
+.signed-in-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(125, 211, 252, 0.28), transparent 42%),
+    radial-gradient(circle at 85% 10%, rgba(2, 132, 199, 0.22), transparent 45%),
+    var(--bg-app);
+}
+
+.signed-in-card {
+  width: 100%;
+  max-width: 520px;
+}
+
+.signed-in-card .nwsdb-card__body {
+  padding: 32px;
+}
+
+.signed-in-card__badge {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success-border);
+  color: var(--color-success-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signed-in-card h1 {
+  margin: 14px 0 10px;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.signed-in-card > .nwsdb-card__body > p {
+  margin: 0 0 20px;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.signed-in-card__details {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 22px;
+  padding: 18px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.signed-in-card__details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.875rem;
+}
+
+.signed-in-card__details dt {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.signed-in-card__details dd {
+  margin: 0;
+  color: var(--text-main);
+  font-weight: 600;
+  text-align: right;
+}
+
+.signed-in-card__demo {
+  margin: 0 0 18px;
+  color: var(--color-primary-700);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .signed-in-card .nwsdb-card__body {
+    padding: 24px;
+  }
+
+  .signed-in-card__details div {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .signed-in-card__details dd {
+    text-align: left;
+  }
+}

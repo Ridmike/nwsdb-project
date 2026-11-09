@@ -1,0 +1,102 @@
+.nwsdb-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+  transition: all var(--transition-fast);
+}
+
+.nwsdb-status-badge--sm {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.nwsdb-status-badge--md {
+  padding: 4px 12px;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+}
+
+.nwsdb-status-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+.nwsdb-status-badge__dot--pulse {
+  position: relative;
+}
+
+.nwsdb-status-badge__dot--pulse::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  background-color: currentColor;
+  opacity: 0.4;
+  animation: pulseGlow 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Handed Over - Amber/Transit */
+.nwsdb-status--handed-over {
+  background-color: var(--color-warning-bg);
+  border-color: var(--color-warning-border);
+  color: var(--color-warning-text);
+}
+
+/* Received / Held - Blue */
+.nwsdb-status--received {
+  background-color: var(--color-info-bg);
+  border-color: var(--color-info-border);
+  color: var(--color-info-text);
+}
+
+/* Pending Review - Purple/Indigo */
+.nwsdb-status--pending-review {
+  background-color: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #4f46e5;
+}
+
+/* Approved - Green */
+.nwsdb-status--approved {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-border);
+  color: var(--color-success-text);
+}
+
+/* Returned - Orange */
+.nwsdb-status--returned {
+  background-color: rgba(249, 115, 22, 0.12);
+  border-color: rgba(249, 115, 22, 0.3);
+  color: #c2410c;
+}
+
+/* Delayed - Danger Red */
+.nwsdb-status--delayed {
+  background-color: var(--color-danger-bg);
+  border-color: var(--color-danger-border);
+  color: var(--color-danger-text);
+}
+
+/* Completed - Emerald Green */
+.nwsdb-status--completed {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-border);
+  color: var(--color-success-text);
+}
+
+/* Default */
+.nwsdb-status--default {
+  background-color: var(--bg-surface-subtle);
+  border-color: var(--border-medium);
+  color: var(--text-secondary);
+}
